@@ -1,2 +1,2 @@
-# pwa
+# pwa.github.io
  tugas kelompok pwa
