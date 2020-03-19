@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- style css -->
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/weather.css">
+    <link rel="stylesheet" media="(max-width:600px)" href="css/weather-2-small.css">
+    <link rel="stylesheet" media="(min-width:601px)" href="css/weather-2-large.css">
+	<!-- script js -->
+</head>
+<body>
+
+<div class="topnav" id="myTopnav">
+  <a href="#home" style="text-align: center;">LOGO</a>
+  <a href="#home" class="active">Weather</a>
+  <div class="search-container">
+  	<form action="/action_page.php">
+      <input type="text" placeholder="Search.." name="search">
+      <button type="submit"><i class="fa fa-search"></i></button>
+  </form>
+  </div>
+  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <i class="fa fa-bars"></i>
+  </a>
+</div>
+
+<div class="col-12">
+<div class="row">
+  <div class="side">
+    <h2>Web Pantau Cuaca (flexbox)</h2>
+    <div class="fakeimg" style="height:205px;"><a target="_blank" rel="nofollow"><img width="205" height="170" border="0" alt="Deskripsi-Gambar" src="css/thankyou.png"/></a></div>
+    <h3>Tugas Kelompok Pemrograman Web Mobile (Responsive Web Design)</h3>
+    <p>Nama - Nama Kelompok :</p>
+    <h4>1. Ari Dwi Nugraha 165410119 - Front end developer</h4>
+    <h4>2. Baital Hakiki 155410169 - Back end developer</h4>
+  </div>
+  <div class="weather-forecast" role="main">
+      <div class="location">New York, NY</div>
+      <div class="date">Tuesday, April 15th</div>
+      <div class="desc">Overcast</div>
+      <div class="current">
+        <div class="visual">
+          <div class="icon cloudy"></div>
+          <div class="temp">58</div>
+          <div class="scale">&deg;F</div>
+        </div>
+        <div class="description">
+          <div class="precip">100%</div>
+          <div class="humidity">97%</div>
+          <div class="wind">4 mph SW</div>
+          <div class="pollen">36</div>
+        </div>
+      </div>
+      <div class="seven-day">
+        <div class="seven-day-fc">
+          <div class="date">Today</div>
+          <div class="icon thunder"></div>
+          <div class="seven-day-temp">
+            <div class="temp-high">68&deg;</div>
+            <div class="temp-low">36&deg;</div>
+          </div>
+          <div class="pcount">36</div>
+        </div>
+        <div class="seven-day-fc">
+          <div class="date">Wednesday</div>
+          <div class="icon sunny"></div>
+          <div class="seven-day-temp">
+            <div class="temp-high">50&deg;</div>
+            <div class="temp-low">39&deg;</div>
+          </div>
+          <div class="pcount">36</div>
+        </div>
+        <div class="seven-day-fc">
+          <div class="date">Thursday</div>
+          <div class="icon sunny"></div>
+          <div class="seven-day-temp">
+            <div class="temp-high">55&deg;</div>
+            <div class="temp-low">39&deg;</div>
+          </div>
+          <div class="pcount">36</div>
+        </div>
+        <div class="seven-day-fc">
+          <div class="date">Friday</div>
+          <div class="icon pc"></div>
+          <div class="seven-day-temp">
+            <div class="temp-high">54&deg;</div>
+            <div class="temp-low">43&deg;</div>
+          </div>
+          <div class="pcount">36</div>
+        </div>
+        <div class="seven-day-fc">
+          <div class="date">Saturday</div>
+          <div class="icon sshowers"></div>
+          <div class="seven-day-temp">
+            <div class="temp-high">64&deg;</div>
+            <div class="temp-low">46&deg;</div>
+          </div>
+          <div class="pcount">36</div>
+        </div>
+        <div class="seven-day-fc">
+          <div class="date">Sunday</div>
+          <div class="icon sshowers"></div>
+          <div class="seven-day-temp">
+            <div class="temp-high">64&deg;</div>
+            <div class="temp-low">50&deg;</div>
+          </div>
+          <div class="pcount">36</div>
+        </div>
+        <div class="seven-day-fc">
+          <div class="date">Monday</div>
+          <div class="icon pc"></div>
+          <div class="seven-day-temp">
+            <div class="temp-high">61&deg;</div>
+            <div class="temp-low">50&deg;</div>
+          </div>
+          <div class="pcount">36</div>
+        </div>
+      </div>
+    </div>
+    <script>
+  (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+  function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+  e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+  e.src='//www.google-analytics.com/analytics.js';
+  r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+  ga('create','UA-52746336-1');ga('send','pageview');
+  var isCompleted = {};
+  function sampleCompleted(sampleName){
+    if (ga && !isCompleted.hasOwnProperty(sampleName)) {
+      ga('send', 'event', 'WebCentralSample', sampleName, 'completed'); 
+      isCompleted[sampleName] = true;
+    }
+  }
+</script>
+    <script type="text/javascript">
+      function init() {
+        window.matchMedia("(min-width: 600px)").addListener(hitMQ);
+      }
+
+      function hitMQ(evt) {
+        sampleCompleted("RWDFundamentals-Weather2");
+      }
+
+      init();
+
+    </script>
+</div>
+</div>
+
+<script>
+function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+</script>
+
+</body>
+</html>
